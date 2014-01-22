@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    background: #fefefe;
+    background: #fbfbf8;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
@@ -70,6 +70,7 @@ body, button, input, select, textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
     clear: both;
     font-family: 'Source Sans Pro', sans-serif;
 }
