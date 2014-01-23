@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Git deploying a .NET console app to Azure using WebJobs
+title: How to deploy Windows Azure WebJobs
 category: Windows Azure Websites, Windows Azure WebJobs
-url: /post/73574681678/git-deploy-console-app
+url: /post/74215124623/deploy-azure-webjobs
 ---
 
 There's a new concept coming from Windows Azure Websites called **WebJobs** where you can have scripts running on a schedule, continuously or simply by invoking them manually.
