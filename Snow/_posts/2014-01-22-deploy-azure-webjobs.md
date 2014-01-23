@@ -5,61 +5,63 @@ category: Windows Azure Websites, Windows Azure WebJobs
 url: /post/74215124623/deploy-azure-webjobs
 ---
 
-There's a new concept coming from Windows Azure Websites called **WebJobs** where you can have scripts running on a schedule, continuously or simply by invoking them manually.
+**Windows Azure WebJobs** is a new feature coming from Windows Azure Websites, you can read all about it [here](http://www.windowsazure.com/en-us/documentation/articles/web-sites-create-web-jobs/).
 
-In this article I'll talk about a simple way of deploying a .NET console application to Windows Azure Websites which will be deployed as a **continuous job**.
+While you can easily add a new WebJob using the Windows Azure portal, you may want to deploy your WebJob in other ways (ftp / web deploy / git), In this post I'll explain how these WebJobs are stored on your Azure Website and how you can deploy a new WebJob.
 
-In short, a continuous job is treated similar to a windows service, as long as it's started/enabled, Azure will make sure it's up, it'll start the process (on all of your instances) and whenever the process goes down it'll simply bring it back up (after a 60 seconds delay).
+## Where is your WebJobs stored? ##
 
-The executable that is deployed as a continuous job should have some kind of an infinite loop (`while (true)`).
+A WebJob is stored under the following directory in your site:
 
-> **Note:** While you can experiment with continuous jobs in free or shared websites, it'll only work properly in a standard website that has the "always on" setting set, this is since in free/shared sites the jobs process will be brought down after about 20 minutes of no requests to it (a request to the jobs process can be to check the status of current jobs).
+`site\wwwroot\App_Data\jobs\{job type}\{job name}`
 
+Where {job type} can be either **continuous** for a job that is always running or **triggered** for a job that starts from an external trigger (on demand / scheduler).
 
-Enough chit-chat, now to the main event, we have .NET code which we want to (continuously) run on Azure, here are the steps:
+And {job name} is your WebJob's name.
 
-* **Write** your .NET code as a .NET console application, here is a sample:
+So a continuous WebJob called myjob will be located at:
 
-<script src="https://gist.github.com/amitapl/8467381.js"></script>
+`site\wwwroot\App_Data\jobs\continuous\myjob`
 
-* **Add** your code to a git repo.
+## What should be inside a WebJob directory? ##
 
- `git init`
+The WebJob directory can contain 1 to as much as you'd like files but at the least it should contain the script that starts the WebJob's process, this script can currently be: batch (.exe/.cmd/.bat), bash (.sh), javascript (.js as node.js), php (.php) or python (.py).
 
- `git add .`
+The script to be run is automatically detected using the following logic:
 
- `git commit -am Coding`
+* First look for a file called run.{supported extension} (first one found wins).
+* If not found look for any file with a supported extension.
+* If not found, this is not a runnable WebJob
 
-* **Create** a new web site with source control.
+> **NOTE:** If you have some other type of execution engine you wish to use and is currently not supported, you can always create a run.cmd file and create your executor command there (`powershell -Command run.ps`).
 
-![](https://31.media.tumblr.com/ec6583e81f55d0d6915a3bafbdb43ea4/tumblr_inline_mzixv5U1is1rvdhx0.png)
+## Deploy my WebJob ##
 
-* **Get** the url to your site's git repository
+So with this information we know that in order to create a new continuous job called myjob all you have to do is get your job's binaries to that folder.
 
-![](https://31.media.tumblr.com/65edce99bcca99c1b7bc585e65b0046d/tumblr_inline_mzixy34iGL1rvdhx0.png)
+One way to do this is to connect to your site via ftp, create the right directory and copy the binaries there (should include at least one supported script file).
 
-* **Push** the repository to your site.
+That's it, the WebJob will be auto-detected and immediately start running.
 
+## Deploy Website + WebJobs ##
 
- `git push http://.../.git master`
+To deploy a website with WebJobs, all you'll need to do is to make sure you deploy your WebJobs are in the right place, take a look at the following structure as an example for a node.js site with a web job:
 
+    ./server.js
+    ./App_Data/jobs/continuous/myjob/run.cmd
 
-* That's it, you now have your .NET console application running on Windows Azure Websites, just go to the WEBJOBS tab and take a look.
+While this project contains only 2 files, it actually is a website with a continuous WebJob, and you can use whatever deployment preference you have to deploy this (ftp / web deploy / git / ...).
 
-![](https://31.media.tumblr.com/322e8c33d777d4df4abe0d75526f9aa8/tumblr_inline_mziy3owv9K1rvdhx0.png)
+## Re-deployment ##
 
+**Continuous** - After you redeploy a WebJob, the currently running process will abort and restart with the new binaries.
 
-> **Note:** Don't forget to enable the **Always On** feature if you're on standard to make sure this job will never stop running.
+**Triggered** - Redeployment will not affect a currently running WebJob but the next run will be using the new WebJob's binaries.
 
+> **NOTE:** Before a WebJob starts to run, the binaries for it are copied to a temporary directory, this way you can always re-deploy a WebJob safely without worrying that the files are locked.
 
-Now to see the continuous job logs click on the "logs" link (you'll need to enter your publishing user name and password, if you're on chrome even better - it just works), there you would see all the system logs (when the job started, stopped, etc...).
+## Triggered WebJob caveat ##
 
-To see the logs produced by the application (console output and error) you need to enable application logging under the CONFIGURATION tab, your logs can go to your file system/azure storage table or blob.
+One issue we encounter with this method is that when you deploy a triggered WebJob, the result is a WebJob that is only **on demand** meaning you need to press the **RUN ONCE** button in the portal in order to initiate it and (for now) there is no way to easily add a schedule to it.
 
-
-> **Note:** You can also use app settings/connection strings which would come from the site's configuration, same as you would do for your ASP.NET website.
-
-
-There are more awesome things to say about webjobs, but that's in next posts.
-
-You can use my repo to try it: [](https://github.com/amitapl/ContinuousHelloWorld)
+A workaround would be to create a dummy schedule WebJob with the name you are about to deploy and the deployment will just replace the binaries but keep current schedule.
