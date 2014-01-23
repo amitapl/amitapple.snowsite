@@ -1,4 +1,4 @@
-@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<Snow.ViewModels.BaseViewModel>
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<Snow.ViewModels.BaseViewModel>
 @using System.Collections.Generic
 @{
     var keywords = String.Join(",", Model.Keywords);
@@ -32,8 +32,6 @@
                         <li><a href="/about">About</a></li>
                         <li><a href="/category">Categories</a></li>
                         <li><a href="/archive">Archive</a></li>
-                        <li><a href="/rss">RSS</a></li>
-                        <li><a href="/feed">Atom</a></li>
                     </ul>
                 </div>
             </nav>

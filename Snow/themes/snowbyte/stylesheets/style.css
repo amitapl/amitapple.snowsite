@@ -20,8 +20,9 @@ html {
 }
 
 body {
-    background: #fbfbf8;
+    background: #f4faff;
 }
+
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
     display: block;
@@ -123,12 +124,12 @@ blockquote {
     font-family: Georgia,"Bitstream Charter",serif;
     font-style: italic;
     margin: 0.8em 1.5em;
-    border-left: 4px #dfdfdf solid;
+    border-left: 4px #cdebd7 solid;
     padding: 10px 15px;
     border-radius: 12px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    background-color: #F2F2F2;
+    background-color: #F8F8ea;
 }
 
     blockquote cite {
@@ -785,15 +786,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 22px;
+    font-size: 30px;
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 22px;
 }
 
 h3 {
-    font-size: 15px;
+    font-size: 18px;
 }
 
 h4, h5, h6 {
@@ -1161,7 +1162,7 @@ ul.posts {
 
   .post > h1 {
     text-align: center;
-    font-weight: 300;
+    font-weight: 600;
   }
     .post > h1,
     .post > h1 a {
@@ -1171,7 +1172,7 @@ ul.posts {
     }
 
     .post > h1 a:hover {
-        color: #888;
+        color: #588;
     }
    
     .post > h1 span {
@@ -1179,7 +1180,7 @@ ul.posts {
       font-weight: normal;
       display: block;
       padding-top: 5px;
-      color: #999;
+      color: #899;
     }
 
     .post .meta {
@@ -1242,9 +1243,10 @@ ul.posts {
 .category-list li a,
 .archive li a {
   margin-left: 15px;
-  padding: 2px 5px;
+  padding: 4px 10px;
   text-decoration: none;
   color: #222;
+    font-style: italic;
 }
 
 span.note {
