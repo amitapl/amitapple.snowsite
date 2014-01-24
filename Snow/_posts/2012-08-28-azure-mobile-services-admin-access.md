@@ -25,7 +25,7 @@ But there is one glitch, since your permissions might be set to User Authenticat
 
 _Getting to the Master Key:_
 
-![](http://media.tumblr.com/tumblr_m9caknPGsc1rvdhx0.png)
+![](/images/2012-08-28-azure-mobile-services-admin-access.md1.png)
 
 
 In order to alter the http request as required by the solution we'll use the IServiceFilter interface from the Mobile Services SDK which allows us to hook up to all requests made by the SDK to our mobile service just before they are sent.

@@ -32,11 +32,11 @@ Enough chit-chat, now to the main event, we have .NET code which we want to (con
 
 * **Create** a new web site with source control.
 
-![](https://31.media.tumblr.com/ec6583e81f55d0d6915a3bafbdb43ea4/tumblr_inline_mzixv5U1is1rvdhx0.png)
+![](/images/2014-01-17-git-deploy-console-app.md1.png)
 
 * **Get** the url to your site's git repository
 
-![](https://31.media.tumblr.com/65edce99bcca99c1b7bc585e65b0046d/tumblr_inline_mzixy34iGL1rvdhx0.png)
+![](/images/2014-01-17-git-deploy-console-app.md2.png)
 
 * **Push** the repository to your site.
 
@@ -46,7 +46,7 @@ Enough chit-chat, now to the main event, we have .NET code which we want to (con
 
 * That's it, you now have your .NET console application running on Windows Azure Websites, just go to the WEBJOBS tab and take a look.
 
-![](https://31.media.tumblr.com/322e8c33d777d4df4abe0d75526f9aa8/tumblr_inline_mziy3owv9K1rvdhx0.png)
+![](/images/2014-01-17-git-deploy-console-app.md3.png)
 
 
 > **Note:** Don't forget to enable the **Always On** feature if you're on standard to make sure this job will never stop running.

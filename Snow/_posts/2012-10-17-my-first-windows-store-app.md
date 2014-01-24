@@ -9,7 +9,7 @@ Just published my first windows 8 app to the store, it is a news reader in Hebre
 
 [My App On The Windows Store]( http://apps.microsoft.com/webpdp/en-US/app/8/feb11719-8b28-407a-ba6c-bcf14901e643 "חדשות 8")
 
-![](http://media.tumblr.com/tumblr_mc1p3w6VAu1rvdhx0.jpg)
+![](/images/2012-10-17-my-first-windows-store-app.md1.jpg)
 
 Basically it is an RSS feed reader for a specific set of feeds from different Israeli news sites.
 To use it you currently have to login using your Microsoft account as it will save the current feeds you selected to follow on the main screen of the app.

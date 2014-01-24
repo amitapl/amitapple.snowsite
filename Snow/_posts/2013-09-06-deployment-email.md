@@ -37,7 +37,7 @@ More on [Windows Azure Web Sites - Zapier Service](https://zapier.com/zapbook/wi
 
 - Go to Zapier and create a new zap.
 
-  ![](http://media.tumblr.com/bae6d050358c1a04257ba17bbab89682/tumblr_inline_mqh23m5Pko1qz4rgp.png)
+  ![](/images/2013-09-06-deployment-email.md1.png)
 
 - For the trigger service select **Windows Azure Websites**
 
@@ -45,7 +45,7 @@ More on [Windows Azure Web Sites - Zapier Service](https://zapier.com/zapbook/wi
 
 - For the action, we'll select **email** and **send outbound email** for this sample but any can be selected
 
-  ![](http://media.tumblr.com/d3dfa3e75d8fdf2ca07b083b9ba09a6f/tumblr_inline_mso7keWNBA1qz4rgp.png)
+  ![](/images/2013-09-06-deployment-email.md2.png)
 
 - Click Continue
 
@@ -53,11 +53,11 @@ More on [Windows Azure Web Sites - Zapier Service](https://zapier.com/zapbook/wi
 
 - In the Azure portal go to your website, click on the **CONFIGURE** tab and under the **git** section copy the url which is under the **DEPLOYMENT TRIGGER URL**
 
-  ![](http://media.tumblr.com/7bcf1cb2e7758cc8dbba6a7942d034aa/tumblr_inline_mso7l28Xgo1qz4rgp.png)
+  ![](/images/2013-09-06-deployment-email.md3.png)
 
 - Go back to the Zapier site and paste this url to the **Deployment URL** textbox, enter a name for this website account and click continue.
 
-  ![](http://media.tumblr.com/9d634a10ff3776ded76c9f97c027a369/tumblr_inline_mso7lhv0qv1qz4rgp.png)
+  ![](/images/2013-09-06-deployment-email.md4.png)
 
 - Since the email action doesn't require any special account, just click continue again.
 
@@ -71,7 +71,7 @@ More on [Windows Azure Web Sites - Zapier Service](https://zapier.com/zapbook/wi
 
 - On the right side of each textbox there is an icon you can click to get the different dynamic fields that will be available from the deployment result, so in the **Body** textbox just experiment with the different fields.
 
-  ![](http://media.tumblr.com/a21dd884c31dd46d0f67f64ae24d9108/tumblr_inline_mso7ltggoF1qz4rgp.png)
+  ![](/images/2013-09-06-deployment-email.md5.png)
 
 - Continue
 

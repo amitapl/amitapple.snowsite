@@ -15,7 +15,7 @@ I needed a view with all of the user group columns together with the name of the
 
 To do that I've created a new table called **UserGroupsExtended** and I've set permissions to admin for all operations except read, this is a workaround for creating a new endpoint in our mobile service.
 
-![](http://media.tumblr.com/tumblr_mb772oiGgk1rvdhx0.jpg)
+![](/images/2012-09-04-custom-parameters-in-mobile-services.md1.jpg)
 
 In the read operation server-side script of this new table, I have the following code in which I use a SQL query to join the 2 tables and return the results of that query (instead of returning results related to the original UserGroupsExtended table which will always be empty).
 

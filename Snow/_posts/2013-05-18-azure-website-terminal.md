@@ -24,7 +24,7 @@ This guide will help you run server-side commands on your Azure Website hosting 
 
  - If you have "git deployment" enabled on your site you can get the endpoint (including user name and password) from the Azure portal go to you site, under the *CONFIGURE* tab, on the *git* section in the *DEPLOYMENT TRIGGER URL*:
 
-        ![](http://media.tumblr.com/8198cda0808027dc4c497af2a2dab92e/tumblr_inline_mjujt54Sf01qz4rgp.png)
+        ![](/images/2013-05-18-azure-website-terminal.md1.png)
 
 - Now that you have your endpoint, open a shell window and run the command:
 
@@ -42,7 +42,7 @@ This guide will help you run server-side commands on your Azure Website hosting 
 
 - Now you can run your commands, including shell commands such as "cd", "dir" and "copy", you'll also be able to run executables such as "git" and "npm".
 
-    ![](http://media.tumblr.com/4ed73405533466c160ba3b8813410293/tumblr_inline_mjtbgdkD031qz4rgp.png)
+    ![](/images/2013-05-18-azure-website-terminal.md2.png)
 
 - To quit simply type ```exit```
 
