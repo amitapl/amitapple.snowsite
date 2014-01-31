@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blog now powered by Sandra.Snow
+title: Blog.Amit Apple now powered by Sandra.Snow
 category: Sandra.Snow
 ---
 
