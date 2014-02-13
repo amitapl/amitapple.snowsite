@@ -20,7 +20,7 @@ This guide will help you run server-side commands on your Azure Website hosting 
 
  - Add "scm" after your site's name (if you have a custom domain you still need to add this to the original URL you received from Azure), for example:
    
-         http://somesitename.azurewebsites.net/ --&gt; http://somesitename.```scm```.azurewebsites.net/
+         http://somesitename.azurewebsites.net/ --&gt; https://somesitename.```scm```.azurewebsites.net/
 
  - If you have "git deployment" enabled on your site you can get the endpoint (including user name and password) from the Azure portal go to you site, under the *CONFIGURE* tab, on the *git* section in the *DEPLOYMENT TRIGGER URL*:
 
@@ -32,11 +32,11 @@ This guide will help you run server-side commands on your Azure Website hosting 
 
     For example:
 
-    ```kuduexec http://somesitename.scm.azurewebsites.net/```
+    ```kuduexec https://somesitename.scm.azurewebsites.net/```
 
     **Note:** You can also add your user name and password to the url (otherwise it simply asks you for them):
 
-    ```kuduexec http://username@somesitename.scm.azurewebsites.net/```
+    ```kuduexec https://username@somesitename.scm.azurewebsites.net/```
 
 - At this point you'll see a command prompt with the root directory of your site (not "wwwroot"), some info on the [directory structure](https://github.com/projectkudu/kudu/wiki/File-structure-on-azure).
 
@@ -79,3 +79,7 @@ This guide will help you run server-side commands on your Azure Website hosting 
 
 - The output for a single command will arrive only after the command finish running, so if you run a long running command it'll take time for the output to show
 (other than piping: ```requireInput.exe < input.txt```).
+
+## Update
+
+You can find an online terminal to your site under  ```https://somesitename.scm.azurewebsites.net/DebugConsole/```
