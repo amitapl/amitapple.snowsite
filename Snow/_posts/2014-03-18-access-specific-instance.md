@@ -38,8 +38,10 @@ So one application for this is that we can create a WebJob that is able to call 
 
         private static void Main(string[] args)
         {
-            var url = new Uri("http://siteinazure.azurewebsites.net/");
-            var response = GetFromInstance(url, Environment.GetEnvironmentVariable("WEBSITE_INSTANCE_ID")).Result;
+            string instanceId = Environment.GetEnvironmentVariable("WEBSITE_INSTANCE_ID");
+            string siteName = Environment.GetEnvironmentVariable("WEBSITE_SITE_NAME");
+            var url = new Uri("http://" + siteName + ".azurewebsites.net/");
+            var response = GetFromInstance(url, instanceId).Result;
             Console.WriteLine(response.Content.ReadAsStringAsync().Result);
         }
 
