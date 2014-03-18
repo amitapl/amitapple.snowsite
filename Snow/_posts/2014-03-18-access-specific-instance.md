@@ -30,7 +30,7 @@ The name of the cookie we're going to use is: **ARRAffinity**
         }
 
 
-The problem that we have now is getting this instance id, currently there is no API that will give us all the current instance ids, but a specific site can find out it's own instance id by looking at the environment variable called: **WEBSITE_INSTANCE_ID**.
+The problem that we have now is getting this instance id, currently there is no API that will give us all the current instance ids, but a specific site can find out it's own instance id by looking at the environment variable called: **WEBSITE\_INSTANCE\_ID**.
 
 So one application for this is that we can create a WebJob that is able to call the Website it is hosted on.
 
