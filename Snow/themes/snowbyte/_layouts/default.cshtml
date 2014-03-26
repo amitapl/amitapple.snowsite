@@ -13,6 +13,14 @@
     <title>Blog.Amit Apple</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+
+	<script type="text/javascript">
+		var appInsights = { queue: [], start: function (n) { function r(n, t) { n[t] = function () { var i = arguments; n.queue.push(function () { n[t].apply(n, i) }) } } var t, i; this.applicationInsightsId = n; this.accountId = null; this.appUserId = null; r(this, "logEvent"); r(this, "logPageView"); t = document.createElement("script"); t.type = "text/javascript"; t.src = "//az416426.vo.msecnd.net/scripts/ai.js"; t.async = !0; i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(t, i) } };
+
+		appInsights.start("1b1c1b42-941d-4203-bce4-6b889d277e2a");
+		appInsights.logPageView();
+	</script>
+
     @Html.CanonicalUrl()
 </head>
 <body class="home blog">
