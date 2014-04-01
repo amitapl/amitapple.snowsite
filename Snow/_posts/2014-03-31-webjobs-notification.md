@@ -1,12 +1,10 @@
 ---
 layout: post
 title: Getting notified when your Azure triggered WebJobs completes
-category: Windows Azure Websites, Windows Azure WebJobs
+category: Azure WebJobs
 ---
 
-Microsoft Azure WebJobs are awesome, and now a little bit more...
-
-I'm going to show you how you can setup a notification whenever your triggered (on-demand or scheduled) WebJobs completes.
+**Microsoft Azure WebJobs** are awesome, and now a little bit more... I'm going to show you how you can setup a notification whenever your triggered (on-demand or scheduled) WebJobs completes.
 
 The notification part is done by integration between Azure and Zapier which provides many different notification types such as: email, phone call, SMS, Facebook post and more, for this post I'll use a phone call but it is very easy to use any of them.
 
@@ -60,7 +58,7 @@ The notification part is done by integration between Azure and Zapier which prov
 
 - Next you specify the content of the message, it can be static and dynamic using the WebJob run result.
 
-- For example we'll use: *Hello the WebJob named {{job_name}} has completed with status {{status}} and took {{duration}}*, on the right you can use the "Insert fields" button to add other interesting dynamic fields.
+- For example we'll use: `Hello the WebJob named {{job_name}} has completed with status {{status}} and took {{duration}}`, on the right you can use the "Insert fields" button to add other interesting dynamic fields.
 
 - You can even choose the voice of the caller (Man/Woman), I'll let you pick this one.
 
