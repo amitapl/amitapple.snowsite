@@ -12,6 +12,7 @@
     <meta name="keywords" content="@keywords" />
     <title>Blog.Amit Apple</title>
     <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="/stylesheets/prettify.css">
     <link href="/stylesheets/styles.css" rel="stylesheet" media="screen">
 
     <script type="text/javascript">
@@ -80,20 +81,17 @@
     <script src="//code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/prettify.js"></script>
+
     @Html.RenderGoogleAnalytics("UA-34307246-1")
 
-    <!--    <script type='text/javascript'>
-          $(function () {
-            $("pre code").parent().each(function () {
-              if (!$(this).hasClass("prettyprint")) {
-                $(this).addClass("prettyprint");
-                a = true
-              }
-            });
-
-            prettyPrint();
-          });
-        </script>-->
-
+    <script>
+        $('pre').addClass('prettyprint');
+        !function ($) {
+            $(function () {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+    </script>
 </body>
 </html>
