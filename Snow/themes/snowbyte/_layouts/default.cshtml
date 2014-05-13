@@ -55,20 +55,7 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-lg-9">
-                @RenderBody()
-            </div>
-            <div class="col-sm-2 col-sm-offset-1 blog-sidebar">
-                <div class="sidebar-module">
-                    <h4>Archives</h4>
-                    <ol class="list-unstyled">
-                        @foreach (var item in Model.MonthYearList)
-                        {
-                            <li><a href="@item.Url">@item.Title</a></li>
-                        }
-                    </ol>
-                </div>
-            </div><!-- /.blog-sidebar -->
+            @RenderBody()
         </div>
 
         <hr>
