@@ -1,32 +1,35 @@
 @inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<Snow.ViewModels.PostViewModel>
 @using System.Collections.Generic
 @{
-  Layout = "default.cshtml";
+    Layout = "default.cshtml";
 }
 
-<div class="post">
-    <h1>@Model.Title</h1> 
-      <div class="meta">
-        <p class="posted">@Model.PostDate.ToString("dd MMM yyyy")</p>
-        <ul class="categories">
-        @foreach(var category in Model.Categories) {
-          <li><a href="/category/@category.Url" title="@category">@category.Name</a></li>
+<div class="blog-main" id="post">
+    <h1 class="blog-post-title">@Model.Title</h1>
+
+    <div class="blog-post-meta">
+        posted on @Model.PostDate.ToString("dd MMM yyyy")
+        @foreach (var category in Model.Categories)
+        {
+            @:| <a class="label label-info" href="/category/@category.Url">@category.Name</a>
         }
-        </ul>
-      </div>
-    <div class="addthis_toolbox addthis_default_style" style="float:right;">
-        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-        <a class="addthis_button_tweet"></a>
     </div>
 
+    <div class="row">
+        <!-- AddThis Button BEGIN -->
+        <div class="addthis_toolbox addthis_default_style row pull-right" style="margin:10px">
+            <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+            <a class="addthis_button_tweet"></a>
+        </div>
+        <script type="text/javascript">var addthis_config = { "data_track_addressbar": true };</script>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-537248a1187b7a5c"></script>
     </div>
+    <div class="blog-post">
+        <!-- AddThis Button END -->
+        @Html.RenderSeries()
 
-    @Html.RenderSeries()
-        
-    @Html.Raw(Model.PostContent)
+        @Html.Raw(Model.PostContent)
+    </div>
 
     @Html.RenderDisqusComments("blogamitapple")
-    
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-****"></script>
-
 </div>

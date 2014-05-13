@@ -4,14 +4,11 @@
   Layout = "default.cshtml";
 }
 
-  <header>
-  <div class="head-inner">
-    <h1>Categories</h1>
-  </div>
-  </header>
+<h1>Categories</h1>
   
-  <ul class="category-list">
     @foreach(var category in Model.AllCategories){
-      <li><a href="/category/@category.Url" title="@category.Name">@category.Name</a></li>
+        <div class="container">
+            <span class="glyphicon glyphicon-folder-close"></span>
+            <a href="/category/@category.Url" title="@category.Name">@category.Name</a>
+        </div>
     }
-  </ul>

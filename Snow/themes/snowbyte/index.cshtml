@@ -4,25 +4,24 @@
   Layout = "default.cshtml";
 }
 
-  <ul class="posts">
+@section featured{
+    <div class="blog-header">
+        <h1 class="blog-title">Blog.Amit Apple</h1>
+        <p class="lead blog-description">Blog by Amit Apple</p>
+    </div>
+}
+
+    <div class="blog-main">
     @foreach(var postPaged in Model.PostsPaged) {
-    <li class="post">
-      <h1><a href="@postPaged.Url">@postPaged.Title</a></h1> 
-      <div class="meta">
-        <p class="posted">@postPaged.Date.ToString("dd MMM yyyy")</p>
-        <ul class="categories">
-        @foreach(var category in @postPaged.Categories.ToList()) {
-          <li><a href="/category/@category" title="@category">@category</a></li>
-        }
-        </ul>
+      <div class="blog-post">
+        <h2 class="blog-post-title"><a href="@postPaged.Url">@postPaged.Title</a></h2>
+        <p class="blog-post-meta">posted on @postPaged.Date.ToString("dd MMM yyyy")</p>
+        @Html.RenderSeries(postPaged)
+        @Html.Raw(postPaged.ContentExcerpt)
+        <p><a class="btn" href="@postPaged.Url">Read more...</a></p>
       </div>
-      @Html.RenderSeries(postPaged)
-      @Html.Raw(postPaged.ContentExcerpt)
-      <p><a href="@postPaged.Url">Read more...</a></p>
-    </li>
-    <hr/>
     }
-  </ul> 
+    </div>
 
   <!-- Pagination links -->
   <div id="post-pagination" class="pagination">
