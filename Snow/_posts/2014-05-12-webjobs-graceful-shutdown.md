@@ -71,7 +71,7 @@ For triggered WebJobs there is no shutdown notification but there is a graceful 
 
 ### Updating the graceful period ###
 
-The graceful period can be updated for any WebJob, the way to do it is to create a file called `job.settings`  with the following content: `{ "stopping_wait_time": 60 }`
+The graceful period can be updated for any WebJob, the way to do it is to create a file called `settings.job`  with the following content: `{ "stopping_wait_time": 60 }`
 
 *The time is specified in seconds*
 
