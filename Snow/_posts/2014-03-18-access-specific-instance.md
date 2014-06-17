@@ -30,7 +30,7 @@ The name of the cookie we're going to use is: **ARRAffinity**
         }
 
 
-The problem that we have now is getting this instance id, currently there is no API that will give us all the current instance ids, but a specific site can find out it's own instance id by looking at the environment variable called: **WEBSITE\_INSTANCE\_ID**.
+The problem that we have now is getting this instance id, in the update below I'll show how, but a specific site can find out it's own instance id by looking at the environment variable called: **WEBSITE\_INSTANCE\_ID**.
 
 So one application for this is that we can create a WebJob that is able to call the Website it is hosted on.
 
@@ -44,5 +44,87 @@ So one application for this is that we can create a WebJob that is able to call 
             var response = GetFromInstance(url, instanceId).Result;
             Console.WriteLine(response.Content.ReadAsStringAsync().Result);
         }
+
+
+## Update ##
+
+Azure Web Sites now provides an API to get all instances (IDs) for your website, you can either do it programmatically or using the Azure CLI tools.
+
+### Get instance IDs for a web site - sample code ###
+
+First thing to do is install the Azure Websites Management Library from [nuget](http://www.nuget.org/packages/Microsoft.WindowsAzure.Management.WebSites/ "nuget"), this is the SDK for managing your Azure Web Site from code.
+
+Now all you need is this code:
+
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            var cert = new X509Certificate2();
+            cert.Import(Convert.FromBase64String("MIIJ/...=="));
+            var client = new WebSiteManagementClient(new CertificateCloudCredentials("subscription_id_guid", cert));
+
+            var instanceIds = client.WebSites.GetInstanceIds("westuswebspace" /*webspace name*/, "somesite" /*web site name*/);
+            Console.WriteLine(String.Join(", ", instanceIds));
+        }
+    }
+
+
+### Azure CLI tools ###
+
+Azure has CLI tools for both PowerShell (for windows users) and xplat using node.js under the cover (for all users including mac, unix and windows).
+
+To get these tools you can go to this [link](http://azure.microsoft.com/en-us/downloads/).
+
+To install the xplat tool you can simply write the following command: `npm install azure-cli -g`
+
+For more information on using the CLI tools you can go to these links:
+[Managing the Cloud from the Command Line](http://www.hanselman.com/blog/ManagingTheCloudFromTheCommandLine.aspx) and [Azure PowerShell - MSDN](http://msdn.microsoft.com/en-us/library/azure/jj156055.aspx)
+
+> Tip for PowerShell - Start by using the following command: `Add-AzureAccout`.
+
+In both tools you get the website's instance ids by getting/showing the website.
+
+#### PowerShell ####
+
+
+    Get-AzureWebsite sitename
+
+    Instances                   : {6d016e86bc41ff8e2fcf5d66da0116e929b41609a8cace17b40b6c5e4eb15b44}
+    NumberOfWorkers             : 1
+    ...
+
+
+#### xPlat ####
+
+
+    > azure site show sitename
+
+    info:    Executing command site show
+    info:    Showing details for site
+    + Getting site information
+    + Getting site config information
+    + Getting repository settings
+    + Getting diagnostic settings
+    + Getting site instances information
+    + Getting locations
+    data:
+    data:    Web Site Name:  sitename
+    data:    Site Mode:      Standard
+    data:    Enabled:        true
+    data:    Availability:   Normal
+    data:    Last Modified:  Mon Jun 16 2014 18:46:58 GMT-0700 (Pacific Daylight Time)
+    data:    Location:       West US
+    data:
+    data:    Host Name
+    data:    ------------------------
+    data:    sitename.azurewebsites.net
+    data:
+    data:    Instance Id
+    data:    ----------------------------------------------------------------
+    data:    6d016e86bc41ff8e2fcf5d66da0116e929b41609a8cace17b40b6c5e4eb15b44
+    ...
+
+
 
 Hope this helps.
