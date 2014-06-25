@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Request for a specific Azure website instance
-category: Windows Azure Websites
+category: Azure Websites
 ---
 
 In Windows Azure Websites you have the ability to scale your site by adding more instances to it where each instance is running on a different VM.

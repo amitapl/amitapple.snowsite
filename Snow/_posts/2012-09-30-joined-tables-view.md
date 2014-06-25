@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Joined Tables View in Windows Azure Mobile Services
-category: Windows Azure Mobile Services
+category: Azure Mobile Services
 url: /post/32655170474/joinedtablesview
 ---
 

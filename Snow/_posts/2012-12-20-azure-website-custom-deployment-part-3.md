@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customizing site deployment based on site's app settings in Azure Websites
-category: Windows Azure Websites
+category: Azure Websites
 url: /post/38419111245/azurewebsitecustomdeploymentpart3
 series:
 	name: WAWSCustomizeDeployment

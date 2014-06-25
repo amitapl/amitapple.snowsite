@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sending an email when your Azure web site deployment completes
-category: Windows Azure Websites
+category: Azure Websites
 url: /post/56390805814/deployment-email
 ---
 

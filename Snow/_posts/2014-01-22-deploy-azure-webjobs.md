@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to deploy Windows Azure WebJobs
-category: Windows Azure Websites, Windows Azure WebJobs
+title: How to deploy Azure WebJobs
+category: Azure Websites, Azure WebJobs
 url: /post/74215124623/deploy-azure-webjobs
 ---
 

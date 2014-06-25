@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Run tests during Azure Websites deployment
-category: Windows Azure Websites
+category: Azure Websites
 url: /post/51576689501/testsduringazurewebsitesdeployment
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Parameters in Azure Mobile Services
-category: Windows Azure Mobile Services
+category: Azure Mobile Services
 url: /post/30921523746/customparametersinmobileservices
 ---
 

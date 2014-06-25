@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Git deploying a .NET console app to Azure using WebJobs
-category: Windows Azure Websites, Windows Azure WebJobs
+category: Azure Websites, Azure WebJobs
 url: /post/73574681678/git-deploy-console-app
 ---
 

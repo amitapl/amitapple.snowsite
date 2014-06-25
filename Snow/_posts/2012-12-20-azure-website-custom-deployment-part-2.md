@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Windows Azure Websites - Custom Deployment Scripts Generator
-category: Windows Azure Websites
+title: Azure Websites - Custom Deployment Scripts Generator
+category: Azure Websites
 url: /post/38418009331/azurewebsitecustomdeploymentpart2
 series:
 	name: WAWSCustomizeDeployment

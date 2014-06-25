@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Azure Mobile Services - Admin Table Viewer Sample
-category: Windows Azure Mobile Services
+category: Azure Mobile Services
 url: /post/30386974705/azure-mobile-services-admin-table-viewer-sample
 ---
 

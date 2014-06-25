@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Azure Mobile Services - Admin Access
-category: Windows Azure Mobile Services
+category: Azure Mobile Services
 url: /post/30386969040/azuremobileservicesadminaccess
 ---
 

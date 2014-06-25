@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Deployment Scripts For Windows Azure Website Using Git Deployment
-category: Windows Azure Websites
+category: Azure Websites
 url: /post/38417491924/azurewebsitecustomdeploymentpart1
 series:
 	name: WAWSCustomizeDeployment

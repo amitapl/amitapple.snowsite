@@ -1,6 +1,6 @@
 ---
 layout: post
-category: Windows Azure Websites
+category: Azure Websites
 title: Simple terminal for your Azure Website
 url: /post/45675601255/azurewebsiteterminal
 ---
