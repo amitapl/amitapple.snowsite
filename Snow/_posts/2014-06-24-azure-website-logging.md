@@ -25,7 +25,7 @@ These are the different log types you can get for your Azure website:
 
 * **Eventlog.xml** - You may see this file sometimes under your LogFiles directory of your website (`d:\home\LogFiles`). This file contains ETW designated events, usually it is generated and populated with errors of some crash that occurred.
 
-* **Kudu Traces** - In your website's file system under `d:\home\LogFiles\Git\trace` (*The "Git" part is a misnomer for historic reasons*) you can find the traces file for [Kudu](https://github.com/projectkudu/kudu/wiki) which drives some of the developer experience features of Azure Websites like: git deployment and WebJobs.
+* **Kudu Traces** - In your website's file system under `d:\home\LogFiles\kudu\trace` you can find the traces file for [Kudu](https://github.com/projectkudu/kudu/wiki) which drives some of the developer experience features of Azure Websites like: git deployment and WebJobs.
 
 * **Application Logs** - See detailed information on application logs in the next section.
 
