@@ -8,13 +8,13 @@ category: Azure WebJobs
 
 The notification part is done by integration between Azure and Zapier which provides many different notification types such as: email, phone call, SMS, Facebook post and more, for this post I'll use a phone call but it is very easy to use any of them.
 
-> NOTE: In a previous [post](http://blog.amitapple.com/post/56390805814/deployment-email/) I explained about [Zapier](http://zapier.com) and how you can have a notification when your Azure Website deployment completes, this is very similar only with a triggered WebJob.
+> NOTE: In a previous [post](http://blog.amitapple.com/post/56390805814/deployment-email/) I explained about [Zapier](http://zapier.com) and how you can have a notification when your Azure Web App deployment completes, this is very similar only with a triggered WebJob.
 
 **Let's do it:**
 
 ### Prerequisites ###
 
-- An Azure Website with at least 1 triggered (on-demand or scheduled) WebJob (although you can add it later).
+- An Azure Web App with at least 1 triggered (on-demand or scheduled) WebJob (although you can add it later).
 
 - Sign up to [Zapier](https://zapier.com/app/signup)
 

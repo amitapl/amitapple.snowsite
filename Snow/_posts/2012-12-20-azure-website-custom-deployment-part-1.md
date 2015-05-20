@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom Deployment Scripts For Windows Azure Website Using Git Deployment
-category: Azure Websites
+title: Custom Deployment Scripts For Microsoft Azure Web App (Website) Using Git Deployment
+category: Azure Websites, Azure Web Apps
 url: /post/38417491924/azurewebsitecustomdeploymentpart1
 series:
 	name: WAWSCustomizeDeployment
@@ -11,7 +11,7 @@ series:
 	part: Part 3 - Custom script generator
 ---
 
-The coolest feature on Windows Azure Websites is the ability to deploy your website using git.
+The coolest feature on Microsoft Azure Web Apps is the ability to deploy your website using git.
 Do a `git push` and bam you're done and deployed within seconds.
 The deployment process is automated, the process will look at the files on the git repository and decide which kind of website it is (asp.net, node, ...) and based on that will do the required steps for the deployment.
 

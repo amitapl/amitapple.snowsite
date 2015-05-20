@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customizing site deployment based on site's app settings in Azure Websites
-category: Azure Websites
+title: Customizing site deployment based on site's app settings in Azure Web Apps (Websites)
+category: Azure Websites, Azure Web Apps
 url: /post/38419111245/azurewebsitecustomdeploymentpart3
 series:
 	name: WAWSCustomizeDeployment
@@ -11,7 +11,7 @@ series:
 	part: Part 3 - Custom script generator
 ---
 
-**In** previous posts I talked about [Windows Azure Website's custom deployment feature](/post/38417491924/azurewebsitecustomdeploymentpart1) and the [tool to easily generate a deployment script](/post/38418009331/azurewebsitecustomdeploymentpart2), in this post I'll do a step by step guide on writing a custom deployment script.
+**In** previous posts I talked about [Microsoft Azure Web App's custom deployment feature](/post/38417491924/azurewebsitecustomdeploymentpart1) and the [tool to easily generate a deployment script](/post/38418009331/azurewebsitecustomdeploymentpart2), in this post I'll do a step by step guide on writing a custom deployment script.
 
 Let's say we have two websites in azure, one is a node.js website and the other is an mvc4 web application, both sites sources are in the same repository so we need a deployment script that handles differently based on which website it is deploying.
 
@@ -52,7 +52,7 @@ At the root of the repository enter the command:
 
 *NOTE: You can also edit this generated file (deploy.cmd) with any custom steps you have, you can also test it on your machine simply by running it, it will publish your website to %REPOSITORY_ROOT%\artifacts.*
 
-### (c) To decide which script should run, based on the website we are currently deploying, we'll use the "app settings" feature in windows azure websites:
+### (c) To decide which script should run, based on the website we are currently deploying, we'll use the "app settings" feature in Microsoft Azure Web Apps:
 
 * Create a deploy.cmd file under the root of the repository with the following:
 
@@ -62,7 +62,7 @@ At the root of the repository enter the command:
 
 * Add all generated files and commit them to the repository.
 
-### (d) Now let's try to push our repository to our Windows Azure Website:
+### (d) Now let's try to push our repository to our Microsoft Azure Web App:
 
     git push WA master
 

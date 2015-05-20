@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Request for a specific Azure website instance
-category: Azure Websites
+title: Request for a specific Azure Web App instance
+category: Azure Websites, Azure Web Apps
 ---
 
-In Windows Azure Websites you have the ability to scale your site by adding more instances to it where each instance is running on a different VM.
+In Microsoft Azure Web Apps you have the ability to scale your site by adding more instances to it where each instance is running on a different VM.
 
 When you have more than one instance a request made to your site can go to any of them using a load-balancer that will decide which instance to route the request to based on how busy each instance is at the time.
 
@@ -52,7 +52,7 @@ Azure Web Sites now provides an API to get all instances (IDs) for your website,
 
 ### Get instance IDs for a web site - sample code ###
 
-First thing to do is install the Azure Websites Management Library from [nuget](http://www.nuget.org/packages/Microsoft.WindowsAzure.Management.WebSites/ "nuget"), this is the SDK for managing your Azure Web Site from code.
+First thing to do is install the Azure Web Apps Management Library from [nuget](http://www.nuget.org/packages/Microsoft.WindowsAzure.Management.WebSites/ "nuget"), this is the SDK for managing your Azure Web Site from code.
 
 Now all you need is this code:
 

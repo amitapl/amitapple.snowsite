@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sending an email when your Azure web site deployment completes
-category: Azure Websites
+title: Sending an email when your Azure web app (website) deployment completes
+category: Azure Websites, Azure Web Apps
 url: /post/56390805814/deployment-email
 ---
 
@@ -27,7 +27,7 @@ More on [Windows Azure Web Sites - Zapier Service](https://zapier.com/zapbook/wi
 
 ### Prerequisites ###
 
-- A Windows Azure Website that is deployed using source control (git, mercurial or dropbox).
+- A Microsoft Azure Web App that is deployed using source control (git, mercurial or dropbox).
 
 - Sign up to [Zapier](https://zapier.com/app/signup)
 
@@ -39,7 +39,7 @@ More on [Windows Azure Web Sites - Zapier Service](https://zapier.com/zapbook/wi
 
   ![](/images/2013-09-06-deployment-email.md1.png)
 
-- For the trigger service select **Windows Azure Websites**
+- For the trigger service select **Microsoft Azure Web Apps**
 
 - For the trigger select **New Website Deployment**
 
@@ -49,7 +49,7 @@ More on [Windows Azure Web Sites - Zapier Service](https://zapier.com/zapbook/wi
 
 - Click Continue
 
-- We need to connect to our Azure Website, for this we need one piece of information from the Azure portal
+- We need to connect to our Azure Web App, for this we need one piece of information from the Azure portal
 
 - In the Azure portal go to your website, click on the **CONFIGURE** tab and under the **git** section copy the url which is under the **DEPLOYMENT TRIGGER URL**
 

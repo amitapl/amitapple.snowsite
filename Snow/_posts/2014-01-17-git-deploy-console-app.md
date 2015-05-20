@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Git deploying a .NET console app to Azure using WebJobs
-category: Azure Websites, Azure WebJobs
+category: Azure Websites, Azure WebJobs, Azure Web Apps
 url: /post/73574681678/git-deploy-console-app
 ---
 
-There's a new concept coming from Windows Azure Websites called **WebJobs** where you can have scripts running on a schedule, continuously or simply by invoking them manually.
+There's a new concept coming from Microsoft Azure Web Apps called **WebJobs** where you can have scripts running on a schedule, continuously or simply by invoking them manually.
 
-In this article I'll talk about a simple way of deploying a .NET console application to Windows Azure Websites which will be deployed as a **continuous job**.
+In this article I'll talk about a simple way of deploying a .NET console application to Microsoft Azure Web Apps which will be deployed as a **continuous job**.
 
 In short, a continuous job is treated similar to a windows service, as long as it's started/enabled, Azure will make sure it's up, it'll start the process (on all of your instances) and whenever the process goes down it'll simply bring it back up (after a 60 seconds delay).
 
@@ -44,7 +44,7 @@ Enough chit-chat, now to the main event, we have .NET code which we want to (con
  `git push http://.../.git master`
 
 
-* That's it, you now have your .NET console application running on Windows Azure Websites, just go to the WEBJOBS tab and take a look.
+* That's it, you now have your .NET console application running on Microsoft Azure Web Apps, just go to the WEBJOBS tab and take a look.
 
 ![](/images/2014-01-17-git-deploy-console-app.md3.png)
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Azure Websites - Custom Deployment Scripts Generator
-category: Azure Websites
+title: Azure Web Apps (Websites) - Custom Deployment Scripts Generator
+category: Azure Websites, Azure Web Apps
 url: /post/38418009331/azurewebsitecustomdeploymentpart2
 series:
 	name: WAWSCustomizeDeployment
@@ -11,7 +11,7 @@ series:
 	part: Part 3 - Custom script generator
 ---
 
-**With** Windows Azure Websites you can deploy your website by simply pushing your git repository, this will automatically deploy your website, and if you want to control this deployment flow you can use the custom deployment feature.
+**With** Microsoft Azure Web Apps you can deploy your website by simply pushing your git repository, this will automatically deploy your website, and if you want to control this deployment flow you can use the custom deployment feature.
 
 To make it easy on us there is a custom deployment script generator feature in the azure-cli tool that will simplify the whole process, basically it will generate a script that has the same logic as the automatic deployment one only now you can change it and also run it locally to test it.
 
@@ -64,6 +64,6 @@ The genius of this tool is that it'll only copy the files that were changed, it'
 
 After adding your own logic to the deployment script you can run in locally and test it to make sure it does what you need it to, it'll publish your site to a sub-directory called *artifacts* so make sure you're not add the files there to your repository.
 
-When the script is tested, add the generated files to your repository (.deployment and deploy.cmd, for node also web.config and iisnode.yml) and push your repository to your windows azure website and see your custom deployment running.
+When the script is tested, add the generated files to your repository (.deployment and deploy.cmd, for node also web.config and iisnode.yml) and push your repository to your Microsoft azure web app and see your custom deployment running.
 
 [Next post a step by step on a specific custom script](/post/38419111245/azurewebsitecustomdeploymentpart3).

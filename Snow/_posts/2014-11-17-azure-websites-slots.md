@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Azure Websites Deployment Slots - Explained
-category: Azure Websites, Deployment Slots
+title: Azure Web Apps (Websites) Deployment Slots - Explained
+category: Azure Websites, Deployment Slots, Azure Web Apps
 ---
 
-One of the premium features you get when using Azure Websites in a standard SKU is the **deployment slots** feature also known as **staged deployment** but it is actually more than that.
+One of the premium features you get when using Azure Web Apps in a standard SKU is the **deployment slots** feature also known as **staged deployment** but it is actually more than that.
 
 In this post I will go over the **deployment slots** concept and what you can do with it.
 
@@ -12,17 +12,17 @@ In this post I will go over the **deployment slots** concept and what you can do
 
 ## What are those deployment slots? ##
 
-From a (standard) website you can create deployment slots which will actually be Azure Website instances that are tied to that Website.
+From a (standard) website you can create deployment slots which will actually be Azure Web App instances that are tied to that Website.
 
-A deployment slot will carry the name of the Azure Website + the name of the slot, for example:
+A deployment slot will carry the name of the Azure Web App + the name of the slot, for example:
 
-If my Azure Website is called **mysite** and I create a slot called **staging** then my slot will be an Azure Website with the name **mysite(staging)** and its url will be **http://mysite-staging.azurewebsites.net**.
+If my Azure Web App is called **mysite** and I create a slot called **staging** then my slot will be an Azure Web App with the name **mysite(staging)** and its url will be **http://mysite-staging.azurewebsites.net**.
 
 ![Add deployment slot](/images/slots2.png)
 
-> It's important to emphasize that the slot is in itself a regular Azure Website, it will have its own app settings, connection string, any other configuration settings and even an scm site (**https://mysite-staging.scm.azurewebsites.net**).
+> It's important to emphasize that the slot is in itself a regular Azure Web App, it will have its own app settings, connection string, any other configuration settings and even an scm site (**https://mysite-staging.scm.azurewebsites.net**).
 
-> In fact by default each Azure Website has a single deployment slot called **production** which is the Azure Website itself.
+> In fact by default each Azure Web App has a single deployment slot called **production** which is the Azure Web App itself.
 
 You can add more than one **deployment slot**.
 
@@ -74,7 +74,7 @@ In PowerShell use the following command:
 
     Set-AzureWebsite -Name mysite –Slot staging -AutoSwapSlotName production
 
-This command will set Azure Websites to auto swap the **staging** slot into **Production** slot whenever **staging** is deployed.
+This command will set Azure Web Apps to auto swap the **staging** slot into **Production** slot whenever **staging** is deployed.
 
 > You can use the operation logs in the (current) Azure portal to see the **auto swap** operation status.
 
@@ -83,7 +83,7 @@ This command will set Azure Websites to auto swap the **staging** slot into **Pr
 
 One important concept to understand about **deployment slots** is how the configuration works.
 
-A deployment slot is a full Azure Website and as one it has all the same configurations as any Azure Website. When you swap deployment slots there are some settings you actually need to keep with the slot and not swap them.
+A deployment slot is a full Azure Web App and as one it has all the same configurations as any Azure Web App. When you swap deployment slots there are some settings you actually need to keep with the slot and not swap them.
 
 A setting that is not swapped is referred to as a setting that is **sticky to the slot**.
 
@@ -110,7 +110,7 @@ And this command to set 2 connection strings as **sticky to the slot**
 
 Another great feature for **deployment slots** is the **traffic routing** also known as **testing in production**.
 
-This feature will allow you to route traffic that is coming to your Azure Website between your **deployment slots** based on percentage of the traffic.
+This feature will allow you to route traffic that is coming to your Azure Web App between your **deployment slots** based on percentage of the traffic.
 
 This feature exists only in the new [Azure preview portal](https://portal.azure.com).
 

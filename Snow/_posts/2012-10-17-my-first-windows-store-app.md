@@ -27,7 +27,7 @@ Most of the time I spent on this app was for polishing up the graphics and under
 
 On the backend for this app I used [Windows Azure Mobile Services](http://www.windowsazure.com/en-us/develop/mobile/ "") which hands down makes backend development a breeze, I use it to authenticate users (with the Live SDK also) and store their selected feeds and also to store all of the feeds the app has so I can add more feeds without updating through the store.
 
-I’ve also authored a simple website to hold my About and Privacy Policy html pages, for that I used Windows Azure Websites, setting up a site took about a minute and that includes creating it (naming it) and setting up a cool git repository on it so deployment is as fast and easy as “git push”, this was also an awesome experience ([git deployment]( http://www.windowsazure.com/en-us/develop/net/common-tasks/publishing-with-git/ "")).
+I’ve also authored a simple website to hold my About and Privacy Policy html pages, for that I used Microsoft Azure Web Apps, setting up a site took about a minute and that includes creating it (naming it) and setting up a cool git repository on it so deployment is as fast and easy as “git push”, this was also an awesome experience ([git deployment]( http://www.windowsazure.com/en-us/develop/net/common-tasks/publishing-with-git/ "")).
 
 [My Website]( http://newsinhebrew8.azurewebsites.net/ "חדשות 8")
 

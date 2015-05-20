@@ -1,13 +1,13 @@
 ---
 layout: post
 title: How to deploy Azure WebJobs
-category: Azure Websites, Azure WebJobs
+category: Azure Websites, Azure WebJobs, Azure Web Apps
 url: /post/74215124623/deploy-azure-webjobs
 ---
 
-**Windows Azure WebJobs** is a new feature coming from Windows Azure Websites, you can read all about it [here](http://www.windowsazure.com/en-us/documentation/articles/web-sites-create-web-jobs/).
+**Microsoft Azure WebJobs** is a new feature coming from Microsoft Azure Web Apps, you can read all about it [here](http://www.windowsazure.com/en-us/documentation/articles/web-sites-create-web-jobs/).
 
-While you can easily add a new WebJob using the Windows Azure portal, you may want to deploy your WebJob in other ways (ftp / web deploy / git), In this post I'll explain how these WebJobs are stored on your Azure Website and how you can deploy a new WebJob.
+While you can easily add a new WebJob using the Windows Azure portal, you may want to deploy your WebJob in other ways (ftp / web deploy / git), In this post I'll explain how these WebJobs are stored on your Azure Web App and how you can deploy a new WebJob.
 
 ## Where is your WebJobs stored? ##
 

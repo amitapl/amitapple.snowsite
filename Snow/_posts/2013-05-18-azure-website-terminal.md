@@ -1,11 +1,11 @@
 ---
 layout: post
-category: Azure Websites
-title: Simple terminal for your Azure Website
+category: Azure Websites, Azure Web Apps
+title: Simple terminal for your Azure Web App
 url: /post/45675601255/azurewebsiteterminal
 ---
 
-This guide will help you run server-side commands on your Azure Website hosting environment, it is very simple and useful and since it's implemented in node.js, it'll work on any (node) supporting OS (Windows / MAC / Linux).
+This guide will help you run server-side commands on your Azure Web App hosting environment, it is very simple and useful and since it's implemented in node.js, it'll work on any (node) supporting OS (Windows / MAC / Linux).
 
 
 - First, you should install [node.js](http://nodejs.org/) if you don't already have it (#whynot?).
@@ -16,7 +16,7 @@ This guide will help you run server-side commands on your Azure Website hosting 
 
     **Note:** There's also a .NET version of kuduexec called [KuduExec.NET](https://github.com/projectkudu/KuduExec.NET)
 
-- Find your "kuduexec" Azure Website endpoint:
+- Find your "kuduexec" Azure Web App endpoint:
 
  - Add "scm" after your site's name (if you have a custom domain you still need to add this to the original URL you received from Azure), for example:
    

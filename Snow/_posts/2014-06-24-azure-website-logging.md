@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Azure Website Logging - Tips and Tools
-category: Azure Websites, Logging, Azure Site Extensions
+title: Azure Web App (Website) Logging - Tips and Tools
+category: Azure Websites, Logging, Azure Site Extensions, Azure Web Apps
 ---
 
-Using Azure Websites includes many benefits that come just out of the box, you just need to know that they're there and how to use them properly. Logging is one of those benefits that integrate seamlessly to your Azure website.
+Using Azure Web Apps includes many benefits that come just out of the box, you just need to know that they're there and how to use them properly. Logging is one of those benefits that integrate seamlessly to your Azure Web App.
 
-*Reference to the official [Azure Websites Logging Document](http://azure.microsoft.com/en-us/documentation/articles/web-sites-enable-diagnostic-log/)*
+*Reference to the official [Azure Web Apps Logging Document](http://azure.microsoft.com/en-us/documentation/articles/web-sites-enable-diagnostic-log/)*
 
-**In this post I'll show ways on maximizing the Azure Websites logging experience.**
+**In this post I'll show ways on maximizing the Azure Web Apps logging experience.**
 
 
 ## Log Types ##
 
-These are the different log types you can get for your Azure website:
+These are the different log types you can get for your Azure Web App:
 
 * **Web Server Logging** - Also known as http logs or iis logs, this will log all requests to your website in [W3C Extended Log File Format](http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/676400bc-8969-4aa7-851a-9319490a9bbb.mspx?mfr=true).
  
@@ -25,7 +25,7 @@ These are the different log types you can get for your Azure website:
 
 * **Eventlog.xml** - You may see this file sometimes under your LogFiles directory of your website (`d:\home\LogFiles`). This file contains ETW designated events, usually it is generated and populated with errors of some crash that occurred.
 
-* **Kudu Traces** - In your website's file system under `d:\home\LogFiles\kudu\trace` you can find the traces file for [Kudu](https://github.com/projectkudu/kudu/wiki) which drives some of the developer experience features of Azure Websites like: git deployment and WebJobs.
+* **Kudu Traces** - In your website's file system under `d:\home\LogFiles\kudu\trace` you can find the traces file for [Kudu](https://github.com/projectkudu/kudu/wiki) which drives some of the developer experience features of Azure Web Apps like: git deployment and WebJobs.
 
 * **Application Logs** - See detailed information on application logs in the next section.
 
@@ -151,13 +151,13 @@ Web server logs and application logs stored in blob storage can be configured wi
 
 ## Log Browser Site Extension ##
 
-One more cool feature that Azure Websites release recently is the [Azure Site Extensions](http://azure.microsoft.com/blog/2014/06/20/azure-web-sites-extensions/).
+One more cool feature that Azure Web Apps release recently is the [Azure Site Extensions](http://azure.microsoft.com/blog/2014/06/20/azure-web-sites-extensions/).
 
-Azure site extensions is basically a gallery of extensions to your Azure website that can originate from Microsoft or from the community. These site extensions can be useful utilities for your website administration.
+Azure site extensions is basically a gallery of extensions to your Azure Web App that can originate from Microsoft or from the community. These site extensions can be useful utilities for your website administration.
 
 One of those site extensions is called **Azure Website Log Browser**.
 
-The **Log Browser** makes it super easy for you to access all of your Azure website logs described here.
+The **Log Browser** makes it super easy for you to access all of your Azure Web App logs described here.
 
 **Features**
 
@@ -203,4 +203,4 @@ The **Log Browser** site extension is open source and is hosted on [GitHub](http
 
 ## Final Thoughts ##
 
-Azure Websites has a very nice and powerful logging experience, together with the **Log Browser** you get an online dashboard and log viewing experience for free and with minimal effort.
+Azure Web Apps has a very nice and powerful logging experience, together with the **Log Browser** you get an online dashboard and log viewing experience for free and with minimal effort.

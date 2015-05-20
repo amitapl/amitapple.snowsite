@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Run tests during Azure Websites deployment
-category: Azure Websites
+title: Run tests during Azure Web Apps (Websites) deployment
+category: Azure Websites, Azure Web Apps
 url: /post/51576689501/testsduringazurewebsitesdeployment
 ---
 
 **Deploying** websites to Azure using GIT has never been easier, and now a new support for running .NET unit tests was added.
 
-To run tests during website deployment you'll need to customize your deployment by generating a deployment script, this is described in the following [article](/post/38418009331/azurewebsitecustomdeploymentpart2 "Windows Azure Websites - Custom Deployment Scripts Generator").
+To run tests during website deployment you'll need to customize your deployment by generating a deployment script, this is described in the following [article](/post/38418009331/azurewebsitecustomdeploymentpart2 "Microsoft Azure Web Apps - Custom Deployment Scripts Generator").
 
 ### In a nut shell: ###
 

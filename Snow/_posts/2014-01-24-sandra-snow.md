@@ -4,7 +4,7 @@ title: Blog.Amit Apple now powered by Sandra.Snow
 category: Sandra.Snow
 ---
 
-I've been wanting to self-host my blog on my own Windows Azure Website for some time now and I've found the perfect solution (for me) to do that in [Sandra.Snow](https://github.com/Sandra/Sandra.Snow).
+I've been wanting to self-host my blog on my own Microsoft Azure Web App for some time now and I've found the perfect solution (for me) to do that in [Sandra.Snow](https://github.com/Sandra/Sandra.Snow).
 
 > Sandra.Snow is a Jekyll inspired static site generation tool that can be run locally, as a CAAS(Compiler as a Service) or setup with Azure to build your site when your repository changes. It is built on top of NancyFX.
 
