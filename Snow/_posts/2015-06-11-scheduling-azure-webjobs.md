@@ -96,7 +96,6 @@ There are pros and cons to each way of scheduling a WebJob, review them and choo
 **Pros**
 
 * Doesn't require the website to be configured as **Always On**.
-* Probably more accurate.
 * Supported by Visual Studio tooling and the current Azure portal.
 
 **Cons**
@@ -114,7 +113,6 @@ There are pros and cons to each way of scheduling a WebJob, review them and choo
 
 **Cons**
 
-* Not as accurate as the Azure Scheduler.
 * Requires **Always On**.
 * Not yet supported by tooling and portal (hopefully that will change).
 
