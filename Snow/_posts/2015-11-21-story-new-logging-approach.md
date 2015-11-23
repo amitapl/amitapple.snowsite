@@ -6,13 +6,15 @@ category: Logging, Analytics, Telemetry, Web Applications
 
 Writing logs is usually pretty easy in a project, just select/add your favorite logging framework (Trace, NLog, Log4Net, ...), maybe configure it a bit, and start writing logs.
 
-But then comes the time when you actually need to use these logs, maybe to debug an issue, this is when you realize the mess: here is an error log but wait what happened before that, who was the user, what was the action and how long did it take... someone PLEASE put me in context!
+But then comes the time when you actually need to use these logs, maybe to debug an issue, this is when you realize the mess: here is an error log but wait what happened before that, who was the user, what was the action and how long did it take... someone please put me in context!
 
-Well there are current solutions for that, you'll go back to the code and start adding correlation ids, and maybe use some logging query magic with grouping and filtering on top of what might be a high amount of logs. Not so easy after all, especially after the fact.
+Well there are current solutions for that, kinda, you'll need to go back to the code and start adding correlation ids, and use some logging query magic with grouping and filtering on top of what might be a high amount of logs. Not so easy after all, especially after the fact as you have enormous amount of logs and most of them are just noise.
+
+What you really want to do is remove all the noise, but still have full logs when you need them (error case for example).
 
 In this blog post I wanted to show a new approach to logging using a new framework called: [Story](https://github.com/narratr/story).
 
-## Story ##
+## What is this story ##
 
     Storytelling.Factory.StartNew("MyAction", () =>
     {
@@ -20,6 +22,15 @@ In this blog post I wanted to show a new approach to logging using a new framewo
         Storytelling.Info("added 1 to counter");
         Storytelling.Data["counter"] = this.counter;
     });
+
+    // Output:
+    // 11/21/2015 5:01:20 PM
+    //   Story MyAction (a66feed7-112a-42fe-9a3f-329939151f23) on rule Trace
+    //   counter - 1
+    //
+    //   +1.9999 ms Info added 1 to counter
+    //
+    //   - Story "MyAction" took 3 ms
 
 The story framework (currently only for .NET) is about collecting information (logs and any bits of data) about the currently running code and putting it inside a context and when this context ends using rules figure out what to do with this information collection (story).
 
@@ -55,7 +66,9 @@ To use the Story you need to create/start a new story and run your code within t
 
 The created story is added to the context (CallContext or HttpContext depending on where you run) so anything running within that context can just call `Storytelling` and add logs/data to the story.
 
-You can also create new stories, which will be added as children to the current story in context (and will become the current story in the context).
+> We name the story ("MyAction" in this case) to help us later when we run rules on the stories.
+
+You can also create new stories, which will be added as children to the current story in context (and will become the current story in the context) giving us an execution graph later when we observe the story.
 
 The second part is setting the rules which tells each story what to do when it ends (and begins), for example:
 
@@ -179,6 +192,23 @@ Now, we can start using Story to collect information.
         });
     }
 
+    // Output:
+    // Selfhost.exe Information: 0 : 11/21/2015 5:42:42 PM
+    //    Story Request (774743a8-768e-4820-a76c-09a32fab6794) on rule Trace
+    //    RequestUrl - "http://localhost:2222/api/something"
+    //    RequestMethod - "GET"
+    //    UserIp - "::1"
+    //    UserAgent - "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36"
+    //    Referer - "http://localhost:2222/"
+    //    Response - 200
+    //    something - {"name":"Smelly Zebra"}
+
+    //    +497.0671 ms Info Getting random name
+    //    +508.0291 ms Info Prepare something object
+
+    //    - Story "Request" took 815 ms
+    //      - Story "GetSomething" took 44 ms
+
 We can also collect information in inner methods.
 
     public async Task<string> GetRandomName()
@@ -219,6 +249,8 @@ You'll notice we've added both a story handler that sends stories to the Trace a
 To make the second one work you'll need to add a connection string for your azure storage account with the name "StoryTableStorage" (can be in the web/app.config or the azure portal settings if using azure).
 
 > If you use the azure table storage story handler to persist your stories and also use Azure Web Apps to deploy your web application you can install the [Azure Websites Log Browser](https://www.siteextensions.net/packages/websitelogs/) ([blog post here](http://blog.amitapple.com/post/2014/06/azure-website-logging/)) which now supports viewing your stories in a readable way.
+
+![Log Browser](/images/viewstory.png)
 
 You can find the full sample app [here on github](https://github.com/amitapl/FooWebApplication).
 
