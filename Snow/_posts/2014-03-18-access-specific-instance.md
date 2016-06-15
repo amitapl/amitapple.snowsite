@@ -81,7 +81,7 @@ To install the xplat tool you can simply write the following command: `npm insta
 For more information on using the CLI tools you can go to these links:
 [Managing the Cloud from the Command Line](http://www.hanselman.com/blog/ManagingTheCloudFromTheCommandLine.aspx) and [Azure PowerShell - MSDN](http://msdn.microsoft.com/en-us/library/azure/jj156055.aspx)
 
-> Tip for PowerShell - Start by using the following command: `Add-AzureAccout`.
+> Tip for PowerShell - Start by using the following command: `Add-AzureAccount`.
 
 In both tools you get the website's instance ids by getting/showing the website.
 
