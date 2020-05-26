@@ -42,10 +42,18 @@ In the "Manage tags" you'll be able to see current tags and edit them including 
 
 Another way to create a tag is on the "Manage team" screen where the view is team member centric instead of tag centric. There you can add 1 or more tags on a specific team member and you can see the different tags each team member has.
 
+<br>
+
 ![](/images/managetags3.png)
+
+<br>
 
 While this describes how to manage tags on desktop/web, you can also do it on the mobile app in a similar way.
 
+<br>
+
 ![](/images/managetagsmobile1.png)
+
+<br>
 
 You can find more information on using Tags [here](https://support.office.com/en-us/article/using-tags-in-teams-667bd56f-32b8-4118-9a0b-56807c96d91e) and [here](https://docs.microsoft.com/en-us/microsoftteams/manage-tags).
