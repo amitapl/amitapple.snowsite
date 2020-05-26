@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Role-Based Messaging in Microsoft Teams
-category: Microsoft Teams, Tags, Messaging, Role-Based Messaging, Collaboration, Telecommunication
+category: Microsoft Teams, Tags, Messaging, Telecommunication
 ---
 
 ## What is Microsoft Teams ##
@@ -13,9 +13,12 @@ category: Microsoft Teams, Tags, Messaging, Role-Based Messaging, Collaboration,
 Role-based messaging is when you want to message a person (or a group) based on their role instead of their name.
 
 Some examples:
+
 * You want to send a message to the **Assistant to the Regional Manager**.
 * You want to recommend a theme to the **Party Planning Committee**.
 * You want to report a fire hazard to the **Security Supervisor**.
+
+<br>
 
 ![Dwight Schrute Becomes Assistant Regional Manager // The Office US](https://i.makeagif.com/media/4-17-2015/F06bPD.gif)
 
@@ -29,6 +32,8 @@ You can think of this tag as a way to add a role to a team member, for example a
 Or as a way to group members of a team, for example add the **Party Planning Committee** tag to Pam, Phyllis, Angela and Ryan.
 
 To manage tags in Microsoft Teams you need to click on the ... next to the team you want to manage tags for, there you should see the "Manage tags" menu item. From there you just click on the "Create tag" button and add the team members you want to that tag.
+
+<br>
 
 ![](/images/managetags.png)
 
@@ -49,8 +54,6 @@ Another way to create a tag is on the "Manage team" screen where the view is tea
 <br>
 
 While this describes how to manage tags on desktop/web, you can also do it on the mobile app in a similar way.
-
-<br>
 
 ![](/images/managetagsmobile1.png)
 
