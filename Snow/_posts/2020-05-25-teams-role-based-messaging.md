@@ -19,6 +19,8 @@ Some examples:
 
 ![Dwight Schrute Becomes Assistant Regional Manager // The Office US](https://i.makeagif.com/media/4-17-2015/F06bPD.gif)
 
+<br>
+
 ## How to have role-based messaging in Microsoft Teams ##
 
 Microsoft Teams has a feature called **Tags** which allows a team owner to add a [custom] tag on team members and later you can at-mention the tag in a channel message or start a new chat with this tag.
@@ -28,11 +30,13 @@ Or as a way to group members of a team, for example add the **Party Planning Com
 
 To manage tags in Microsoft Teams you need to click on the ... next to the team you want to manage tags for, there you should see the "Manage tags" menu item. From there you just click on the "Create tag" button and add the team members you want to that tag.
 
-![](/images/managetags1.png)
+![](/images/managetags.png)
 
-![](/images/managetags2.png)
+<br>
 
 > Note: You need to either be the team owner to manage tags for the team or the team owner can also configure all members of a team to be allowed to manage tags on the "Manage Team / Settings" screen.
+
+<br>
 
 In the "Manage tags" you'll be able to see current tags and edit them including renaming a tag or adding/removing team members from a tag. If you remove all members from a tag, the tag will be removed.
 
@@ -44,4 +48,4 @@ While this describes how to manage tags on desktop/web, you can also do it on th
 
 ![](/images/managetagsmobile1.png)
 
-For more information on using Tags you can use these links: [Link 1](https://support.office.com/en-us/article/using-tags-in-teams-667bd56f-32b8-4118-9a0b-56807c96d91e), [Link 2](https://docs.microsoft.com/en-us/microsoftteams/manage-tags).
+You can find more information on using Tags [here](https://support.office.com/en-us/article/using-tags-in-teams-667bd56f-32b8-4118-9a0b-56807c96d91e) and [here](https://docs.microsoft.com/en-us/microsoftteams/manage-tags).
