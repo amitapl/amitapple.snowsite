@@ -4,13 +4,13 @@ title: Role-Based Messaging in Microsoft Teams
 category: Microsoft Teams, Tags, Messaging, Telecommunication
 ---
 
-## What is Microsoft Teams ##
+## What is Microsoft Teams? ##
 
-[Microsoft Teams](https://www.microsoft.com/en-us/microsoft-365/microsoft-teams/group-chat-software) is a collaboration and communication platform for organizations and teams that includes: messaging, meetings, calls, file storage, application integrations and more.
+[Microsoft Teams](https://www.microsoft.com/en-us/microsoft-365/microsoft-teams/group-chat-software) is a collaboration and communication platform for organizations and teams that includes messaging, meetings, calls, file storage, application integrations and more.
 
-## What is Role-Based Messaging ##
+## What is Role-Based Messaging? ##
 
-Role-based messaging is when you want to message a person (or a group) based on their role instead of their name.
+Role-based messaging is contacting a person (or a group) based on their role instead of their name.
 
 Some examples:
 
@@ -24,14 +24,17 @@ Some examples:
 
 <br>
 
-## How to have role-based messaging in Microsoft Teams ##
+## Role-based messaging in Microsoft Teams ##
 
-Microsoft Teams has a feature called **Tags** which allows a team owner to add a [custom] tag on team members and later you can at-mention the tag in a channel message or start a new chat with this tag.
+The way to achieve role-based messaging in Microsoft Teams is using a feature called **Tags**.
 
-You can think of this tag as a way to add a role to a team member, for example add the **Assistant to the Regional Manager** tag to Dwight.
+> Tags in Microsoft Teams let users communicate with a subset of people on a team. Tags can be added to one or multiple team members to easily connect with the right subset of people. Team owners and members (if the feature is enabled for them) can add one or more tags to a person. The tags can then be used in @mentions by anyone on the team in a channel post or to start a conversation with only those people who are assigned that tag.
+([source](https://docs.microsoft.com/en-us/microsoftteams/manage-tags))
+
+You can think of Tags as a way to add a role to a team member, for example add the **Assistant to the Regional Manager** tag to Dwight.
 Or as a way to group members of a team, for example add the **Party Planning Committee** tag to Pam, Phyllis, Angela and Ryan.
 
-To manage tags in Microsoft Teams you need to click on the ... next to the team you want to manage tags for, there you should see the "Manage tags" menu item. From there you just click on the "Create tag" button and add the team members you want to that tag.
+To manage tags in Microsoft Teams you need to click on the **...** next to the team for which you want to manage tags. There, you should see the "Manage tags" menu item. Then click on the "Create tag" button and add the team members you want to that tag.
 
 <br>
 
@@ -45,7 +48,7 @@ To manage tags in Microsoft Teams you need to click on the ... next to the team 
 
 In the "Manage tags" you'll be able to see current tags and edit them including renaming a tag or adding/removing team members from a tag. If you remove all members from a tag, the tag will be removed.
 
-Another way to create a tag is on the "Manage team" screen where the view is team member centric instead of tag centric. There you can add 1 or more tags on a specific team member and you can see the different tags each team member has.
+Another way to create a tag is on the "Manage team" screen where the view is team member centric instead of tag centric. There you can add 1 or more tags on a specific team member and see the different tags each team member has.
 
 <br>
 
