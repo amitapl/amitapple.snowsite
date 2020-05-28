@@ -56,19 +56,21 @@ Another way to create a tag is on the "Manage team" screen where the view is tea
 
 <br>
 
-While this describes how to manage tags on desktop/web, you can also do it on the mobile app in a similar way.
-
-![](/images/managetagsmobile1.png)
-
-<br>
-
 Once you have your tags/roles you can start using them when writing a channel message to send a notification to the right person by mentioning the tag.
 
 ![](/images/mention1.png)
 
+<br>
+
 Or by starting a chat conversation with the person (or people) with that tag.
 
-![](/images/managetags.png)
+![](/images/chat1.png)
+
+<br>
+
+While this post describes how to manage and use tags on desktop/web, you can also do it on the mobile app in a similar way.
+
+![](/images/managetagsmobile1.png)
 
 <br>
 
