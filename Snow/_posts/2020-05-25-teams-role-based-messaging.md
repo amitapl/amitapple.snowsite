@@ -62,4 +62,14 @@ While this describes how to manage tags on desktop/web, you can also do it on th
 
 <br>
 
+Once you have your tags/roles you can start using them when writing a channel message to send a notification to the right person by mentioning the tag.
+
+![](/images/mention1.png)
+
+Or by starting a chat conversation with the person (or people) with that tag.
+
+![](/images/managetags.png)
+
+<br>
+
 You can find more information on using Tags [here](https://support.office.com/en-us/article/using-tags-in-teams-667bd56f-32b8-4118-9a0b-56807c96d91e) and [here](https://docs.microsoft.com/en-us/microsoftteams/manage-tags).
