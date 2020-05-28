@@ -46,7 +46,7 @@ To manage tags in Microsoft Teams you need to click on the **...** next to the t
 
 <br>
 
-In the "Manage tags" you'll be able to see current tags and edit them including renaming a tag or adding/removing team members from a tag. If you remove all members from a tag, the tag will be removed.
+In the "Manage Tags" menu, you'll be able to see existing tags and edit them by renaming a tag or adding/removing team members from a tag. If you remove all members from a tag, the tag will be removed.
 
 Another way to create a tag is on the "Manage team" screen where the view is team member centric instead of tag centric. There you can add 1 or more tags on a specific team member and see the different tags each team member has.
 
